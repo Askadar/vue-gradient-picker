@@ -1,87 +1,52 @@
 {
-  "name": "vue-gpickr",
-  "version": "1.0.0",
-  "private": false,
-  "description": "Vue gradient picker",
-  "keywords": [
-    "vue",
-    "gradient",
-    "gradient picker",
-    "gpickr"
-  ],
-  "author": {
-    "name": "Roman Zhbadynskyi",
-    "email": "zhbadynskyi@gmail.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/insky/vue-gpickr.git"
-  },
-  "homepage": "https://insky.github.io/vue-gpickr/",
-  "main": "./dist/vue-gpickr.umd.min.js",
-  "files": [
-    "dist/*"
-  ],
-  "scripts": {
-    "serve": "vue-cli-service serve main.js",
-    "build": "vue-cli-service build --target lib --name vue-gpickr src/index.js && rm dist/demo.html",
-    "deploy": "./deploy.sh",
-    "_deploy": "NODE_ENV=production vue-cli-service build --target app --name vue-gpickr --dest docs main.js",
-    "lint": "vue-cli-service lint",
-    "eslint": "eslint ./src --ext vue,js,mjs",
-    "eslint:fix": "eslint ./src --ext vue,js,mjs --fix"
-  },
-  "dependencies": {
-    "@ckpack/vue-color": "^1.2.0",
-    "tinycolor2": "^1.4.2",
-    "vue": "^3.2.37"
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.18.9",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "eslint": "^8.22.0",
-    "eslint-plugin-vue": "^9.3.0",
-    "sass": "^1.54.4",
-    "sass-loader": "^13.0.2",
-    "vue-template-compiler": "^2.7.8"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "es2021": true,
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "plugin:vue/vue3-recommended",
-      "plugin:vue/vue3-strongly-recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {
-      "vue/max-attributes-per-line": ["error", {
-        "singleline": {
-          "max": 3
-        },
-        "multiline": {
-          "max": 1
-        }
-      }]
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "babel": {
-    "presets": [
-      "@vue/cli-plugin-babel/preset"
-    ]
-  }
+	"name": "vue-gradient-picker",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Vue gradient picker",
+	"main": "./dist/vue-gradient-picker.umd.js",
+	"module": "./dist/vue-gradient-picker.es.js",
+	"author": {
+		"name": "Roman Zhbadynskyi",
+		"email": "zhbadynskyi@gmail.com"
+	},
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc --noEmit && vite build",
+		"preview": "vite preview"
+	},
+	"peerDependencies": {
+		"@ckpack/vue-color": "^1.2.0",
+		"vue": "^3.2.37"
+	},
+	"dependencies": {
+		"@ctrl/tinycolor": "^3.4.1"
+	},
+	"devDependencies": {
+		"@ckpack/vue-color": "^1.2.0",
+		"@types/node": "^14",
+		"@vitejs/plugin-vue": "^3.1.0",
+		"prettier": "^2.7.1",
+		"stylus": "^0.59.0",
+		"typescript": "^4.6.4",
+		"vite": "^3.1.0",
+		"vite-plugin-dts": "^1.5.0",
+		"vue": "^3.2.37",
+		"vue-tsc": "^0.40.4"
+	},
+	"keywords": [
+		"vue",
+		"gradient",
+		"gradient picker",
+		"gpickr"
+	],
+	"files": [
+		"dist/*"
+	],
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
 }
