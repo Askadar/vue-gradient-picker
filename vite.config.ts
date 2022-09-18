@@ -9,7 +9,7 @@ export default defineConfig({
 
 	build: {
 		lib: {
-			entry: resolve(__dirname, 'src/components'),
+			entry: resolve(__dirname, 'src/index.ts'),
 			name: 'vue-gradient-picker',
 			fileName: (format) => `vue-gradient-picker.${format}.js`,
 		},

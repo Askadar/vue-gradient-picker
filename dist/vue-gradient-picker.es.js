@@ -790,5 +790,6 @@ function $t(e, t, r, n, i, s) {
 }
 const Ot = /* @__PURE__ */ St(wt, [["render", $t], ["__scopeId", "data-v-01ddcd79"]]);
 export {
-  Ot as GradientPicker
+  Ot as GradientPicker,
+  S as LinearGradient
 };

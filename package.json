@@ -1,10 +1,11 @@
 {
 	"name": "vue-gradient-picker",
-	"version": "1.0.0",
+	"version": "1.1.1",
 	"private": true,
 	"description": "Vue gradient picker",
 	"main": "./dist/vue-gradient-picker.umd.js",
 	"module": "./dist/vue-gradient-picker.es.js",
+	"types": "./dist/index.d.ts",
 	"author": {
 		"name": "Roman Zhbadynskyi",
 		"email": "zhbadynskyi@gmail.com"
