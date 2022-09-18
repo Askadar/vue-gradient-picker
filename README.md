@@ -8,11 +8,11 @@ Vue gradient picker component. Inspired by [gpickr](https://simonwep.github.io/g
 > Vue 3 version. Lock your version on 0.4.2 to use with Vue 2
 
 ### [Demo](https://insky.github.io/vue-gpickr/)
-  
-![vue-gpickr](./scr.png?raw=true "How it looks")   
-  
-  
+
+![vue-gpickr](./scr.png?raw=true 'How it looks')
+
 ### Usage
+
 ```
 npm i vue-gpickr
 ```

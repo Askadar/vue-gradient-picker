@@ -43,6 +43,7 @@
 <script lang="ts">
 // @ts-ignore have to type it
 import { Sketch } from '@ckpack/vue-color'
+import { HSL, RGBA, HSV, ColorFormats } from '@ctrl/tinycolor'
 import { defineComponent } from 'vue'
 import { LinearGradient } from '../util'
 import { GradientStop } from '../util/Gradient'
@@ -50,6 +51,17 @@ import { GradientStop } from '../util/Gradient'
 const COLOR_INDEX = 0
 const POSITION_INDEX = 1
 const REMOVE_TRESHOLD = 50
+
+interface VueColor {
+	hsl: HSL
+	hex: string
+	hex8: string
+	rgba: RGBA
+	hsv: HSV
+	oldHue: HSL['h']
+	source: ColorFormats
+	a: RGBA['a']
+}
 
 export default defineComponent({
 	components: {
@@ -96,8 +108,7 @@ export default defineComponent({
 			get() {
 				return this.stops[this.currentStopIdx][COLOR_INDEX]
 			},
-			set(val: any) {
-				console.log('weird type', val)
+			set(val: VueColor) {
 				this.stops[this.currentStopIdx][COLOR_INDEX] = val.hex8
 				this.emitInput(this.angle, this.stops, this.limit)
 			},

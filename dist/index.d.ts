@@ -1,2 +1,2 @@
 export { GradientPicker } from './components';
-export { LinearGradient } from './util';
+export { LinearGradient, Gradient } from './util';

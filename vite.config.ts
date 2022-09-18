@@ -8,17 +8,17 @@ export default defineConfig({
 	plugins: [vue(), dts()],
 
 	build: {
+		minify: false,
 		lib: {
 			entry: resolve(__dirname, 'src/index.ts'),
 			name: 'vue-gradient-picker',
-			fileName: (format) => `vue-gradient-picker.${format}.js`,
+			formats: ['umd', 'es'],
 		},
 		rollupOptions: {
-			external: ['vue', '@ckpack/vue-color'],
+			external: ['vue'],
 			output: {
 				globals: {
 					vue: 'Vue',
-					'@ckpack/vue-color': '@ckpack/vue-color',
 				},
 			},
 		},

@@ -1,10 +1,10 @@
 {
 	"name": "vue-gradient-picker",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"private": true,
 	"description": "Vue gradient picker",
 	"main": "./dist/vue-gradient-picker.umd.js",
-	"module": "./dist/vue-gradient-picker.es.js",
+	"module": "./dist/vue-gradient-picker.js",
 	"types": "./dist/index.d.ts",
 	"author": {
 		"name": "Roman Zhbadynskyi",
@@ -18,14 +18,13 @@
 		"preview": "vite preview"
 	},
 	"peerDependencies": {
-		"@ckpack/vue-color": "^1.2.0",
 		"vue": "^3.2.37"
 	},
 	"dependencies": {
+		"@ckpack/vue-color": "^1.2.0",
 		"@ctrl/tinycolor": "^3.4.1"
 	},
 	"devDependencies": {
-		"@ckpack/vue-color": "^1.2.0",
 		"@types/node": "^14",
 		"@vitejs/plugin-vue": "^3.1.0",
 		"prettier": "^2.7.1",
@@ -39,8 +38,7 @@
 	"keywords": [
 		"vue",
 		"gradient",
-		"gradient picker",
-		"gpickr"
+		"gradient picker"
 	],
 	"files": [
 		"dist/*"

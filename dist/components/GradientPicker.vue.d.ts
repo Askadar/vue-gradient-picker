@@ -1,5 +1,16 @@
+import { HSL, RGBA, HSV, ColorFormats } from '@ctrl/tinycolor';
 import { LinearGradient } from '../util';
 import { GradientStop } from '../util/Gradient';
+interface VueColor {
+    hsl: HSL;
+    hex: string;
+    hex8: string;
+    rgba: RGBA;
+    hsv: HSV;
+    oldHue: HSL['h'];
+    source: ColorFormats;
+    a: RGBA['a'];
+}
 declare const _sfc_main: import("vue").DefineComponent<{
     modelValue: {
         type: typeof LinearGradient;
@@ -22,7 +33,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     };
     currentColor: {
         get(): import("@ctrl/tinycolor").ColorInput;
-        set(val: any): void;
+        set(val: VueColor): void;
     };
     orderedStops(): GradientStop[];
     limit(): number | undefined;
