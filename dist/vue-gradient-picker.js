@@ -2203,8 +2203,11 @@ const _sfc_main = defineComponent({
     handleTouchend() {
       this.unbindEventListeners();
     },
+    isTouchEvent(event) {
+      return Object.prototype.hasOwnProperty.call(event, "touches");
+    },
     getClickPosition(event) {
-      if (event instanceof TouchEvent) {
+      if (this.isTouchEvent(event)) {
         return { x: event.touches[0].clientX, y: event.touches[0].clientY };
       } else {
         return { x: event.clientX, y: event.clientY };
@@ -2245,7 +2248,7 @@ const _sfc_main = defineComponent({
     }
   }
 });
-const GradientPicker_vue_vue_type_style_index_0_scoped_cc4f9931_lang = "";
+const GradientPicker_vue_vue_type_style_index_0_scoped_96d4eaf7_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -2253,7 +2256,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _withScopeId = (n) => (pushScopeId("data-v-cc4f9931"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-96d4eaf7"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "vue-gpickr" };
 const _hoisted_2 = { class: "vue-gpickr-inner-container" };
 const _hoisted_3 = { class: "vue-gpickr-preview-container" };
@@ -2327,7 +2330,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ]);
 }
-const GradientPicker = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-cc4f9931"]]);
+const GradientPicker = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-96d4eaf7"]]);
 export {
   Gradient,
   GradientPicker,

@@ -53,6 +53,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     unbindEventListeners(): void;
     handleTouchstart(index: number): void;
     handleTouchend(): void;
+    isTouchEvent(event: MouseEvent | TouchEvent): event is TouchEvent;
     getClickPosition(event: MouseEvent | TouchEvent): {
         x: number;
         y: number;

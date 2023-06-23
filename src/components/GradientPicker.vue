@@ -191,8 +191,13 @@ export default defineComponent({
 		handleTouchend() {
 			this.unbindEventListeners()
 		},
+
+		// TouchEvent constructor is not universal so gotta typesafe manually
+		isTouchEvent(event: MouseEvent | TouchEvent): event is TouchEvent {
+			return Object.prototype.hasOwnProperty.call(event, 'touches')
+		},
 		getClickPosition(event: MouseEvent | TouchEvent): { x: number; y: number } {
-			if (event instanceof TouchEvent) {
+			if (this.isTouchEvent(event)) {
 				return { x: event.touches[0].clientX, y: event.touches[0].clientY }
 			} else {
 				return { x: event.clientX, y: event.clientY }
